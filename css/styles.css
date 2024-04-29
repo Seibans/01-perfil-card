@@ -1,0 +1,105 @@
+/* -----------------
+Tabla de contenidos:
+--------------------
+1. Fuente ......................... 10
+2. Variables ...................... 13
+3. Estilos generales .............. 32
+-------------------- */
+
+/* ----- Fuente ----- */
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+/* ----- Variables ----- */
+:root {
+  /* colores */
+  --color: #fcfcfc;
+
+  /* configuracion */
+  --fuente: "Montserrat", sans-serif;
+  --ft-size: 1rem;
+  --l-height: 22px;
+}
+
+/* ----------------------------- */
+/* ----- Estilos generales ----- */
+/* ----------------------------- */
+body {
+  font-family: var(--fuente);
+  background: #212020;
+  color: var(--color);
+}
+.container{
+  display: grid;
+  place-items: center;
+  height: 100dvh;
+  & .card{
+    background: #242323;
+    width: 24rem;
+    height: 30rem;
+    border-radius: 10px 10px 0px 0px;
+    position: relative;
+    & img{
+      position: absolute;
+      width: 8.5rem;
+      left: 50%;
+      top: 25%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+    }
+    
+    & .data-pablo{
+      text-align: center;
+      position: absolute;
+      left: 50%;
+      top: 58%;
+      transform: translate(-50%, -50%);
+
+      & p{
+        color: #C2C2C2;
+      }
+      & p:first-child{
+        font-weight: 700;
+        font-size: 18px;
+      }
+
+      & span{
+        font-size: 14px;
+        background: #1e1d1d;
+        padding: 6px;
+        border-radius: 20px;
+      }
+
+      & p:last-child{
+        width: 15rem;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+
+    & .footer-card{
+      width: 100%;
+      height: 95px;
+      background: #1f1e1e;
+      position: absolute;
+      bottom: 0%;
+      left: 50%;
+      transform: translate(-50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+
+      
+      & svg{
+        transition: .5s ease-in-out;
+      }
+
+      & svg:hover{
+  			transform: skew(-5deg, -10deg);
+        fill: rgb(26, 255, 0) !important;
+      }
+
+    }
+  }
+}
